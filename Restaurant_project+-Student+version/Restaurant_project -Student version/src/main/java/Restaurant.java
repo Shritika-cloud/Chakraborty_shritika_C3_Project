@@ -38,13 +38,11 @@ public class Restaurant {
             return true;
         }
         return false;
-        //DELETE ABOVE STATEMENT AND WRITE CODE HERE
     }
 
 
     public List<Item> getMenu() {
         return this.menu;
-        //DELETE ABOVE RETURN STATEMENT AND WRITE CODE HERE
     }
 
     private Item findItemByName(String itemName){
@@ -79,6 +77,14 @@ public class Restaurant {
 
     public String getName() {
         return name;
+    }
+   
+    public int getOrderValue(List<Item> item){
+        int totalValue = 0;
+        for (Item myItem : item) {
+            totalValue += myItem.getPrice();
+        }
+        return totalValue;
     }
 
 }
